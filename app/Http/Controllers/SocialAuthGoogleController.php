@@ -35,7 +35,7 @@ class SocialAuthGoogleController extends Controller
             ->redirectUrl($uri)
             ->stateless()->user();
 
-//        return response()->json($socialUser);
+       // return response()->json($socialUser);
 
         $user = $service->createOrGetUser($socialUser);
         $token = $user->createToken('Token Name')->accessToken;
